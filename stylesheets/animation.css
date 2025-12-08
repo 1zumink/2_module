@@ -1,0 +1,235 @@
+@keyframes boxColorChange {
+  0% {
+    background-color: cornflowerblue;
+  }
+  100% {
+    background-color: coral;
+  }
+}
+@keyframes movingBox {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(94vw);
+  }
+}
+@keyframes boxToCircle {
+  0% {
+    width: 10vw;
+  }
+  50% {
+    width: 5vw;
+    border-radius: 0%;
+  }
+  100% {
+    width: 5vw;
+    border-radius: 100%;
+  }
+}
+
+/* спрайтовые анимации */
+@keyframes marioWalk {
+  0% {
+    background-position-x: 0;
+  }
+  25% {
+    background-position-x: -68px;
+  }
+  50% {
+    background-position-x: -136px;
+  }
+  75% {
+    background-position-x: -204px;
+  }
+}
+@keyframes marioMove {
+  0% {
+    margin-left: -68px;
+  }
+  48% {
+    transform: translateY(0);
+  }
+  50% {
+    /* margin-top: -50px; */
+    transform: translateY(-50px);
+  }
+  52% {
+    transform: translateY(0);
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+@keyframes marioJump {
+  48% {
+    opacity: 0;
+  }
+  48.1% {
+    opacity: 1;
+  }
+  50% {
+    /* margin-top: -50px; */
+    opacity: 1;
+  }
+  52% {
+    opacity: 1;
+  }
+  52.1% {
+    opacity: 0;
+  }
+}
+@keyframes marioLetters {
+  48% {
+    color: black;
+    transform: translateY(0px);
+  }
+
+  50% {
+    color: red;
+    transform: translateY(-30px);
+  }
+  52% {
+    transform: translateY(0px);
+  }
+  100% {
+    color: black;
+  }
+}
+@keyframes blast {
+  0% {
+    opacity: 0;
+    background-position: 0 0;
+  }
+  /* первый ряд */
+  3% {
+    opacity: 1;
+    background-position: 0 0;
+  }
+  6% {
+    background-position: -14.75vw 0;
+  }
+  9% {
+    background-position: -29.49vw 0;
+  }
+  12% {
+    background-position: -44.24vw 0;
+  }
+  15% {
+    background-position: -58.98vw 0;
+  }
+  18% {
+    background-position: -73.73vw 0;
+  }
+  21% {
+    background-position: -88.48vw 0;
+  }
+  24% {
+    background-position: -103.22vw 0;
+  }
+  /* второй ряд */
+  27% {
+    background-position: 0 -14.75vw;
+  }
+  30% {
+    background-position: -14.75vw -14.75vw;
+  }
+  33% {
+    background-position: -29.49vw -14.75vw;
+  }
+  36% {
+    background-position: -44.24vw -14.75vw;
+  }
+  39% {
+    background-position: -58.98vw -14.75vw;
+  }
+  42% {
+    background-position: -73.73vw -14.75vw;
+  }
+  45% {
+    background-position: -88.48vw -14.75vw;
+  }
+  48% {
+    background-position: -103.22vw -14.75vw;
+  }
+  /* третий ряд */
+  51% {
+    background-position: 0 -29.49vw;
+  }
+  54% {
+    background-position: -14.75vw -29.49vw;
+  }
+  57% {
+    background-position: -29.49vw -29.49vw;
+  }
+  60% {
+    background-position: -44.24vw -29.49vw;
+  }
+  63% {
+    background-position: -58.98vw -29.49vw;
+  }
+  66% {
+    background-position: -73.73vw -29.49vw;
+  }
+  69% {
+    background-position: -88.48vw -29.49vw;
+  }
+  72% {
+    background-position: -103.22vw -29.49vw;
+  }
+  /* четвертый ряд */
+  75% {
+    background-position: 0 -44.24vw;
+  }
+  78% {
+    background-position: -14.75vw -44.24vw;
+  }
+  81% {
+    background-position: -29.49vw -44.24vw;
+  }
+  84% {
+    background-position: -44.24vw -44.24vw;
+  }
+  87% {
+    background-position: -58.98vw -44.24vw;
+  }
+  90% {
+    background-position: -73.73vw -44.24vw;
+  }
+  93% {
+    background-position: -88.48vw -44.24vw;
+  }
+  96% {
+    background-position: -103.22vw -44.24vw;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes eyes {
+  0% {
+    background-position-x: -60vw;
+  }
+  33% {
+    background-position-x: -75vw;
+  }
+  66% {
+    background-position-x: -90vw;
+  }
+}
+@keyframes mouth {
+  0% {
+    background-position-x: -15vw;
+  }
+  33% {
+    background-position-x: -30vw;
+  }
+  66% {
+    background-position-x: -45vw;
+  }
+}
+бебеб

@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+}
+section {
+  padding: 0.5vw;
+}
+.box {
+  width: 10vw;
+  height: 10vw;
+  background-color: cornflowerblue;
+  /* animation-name: boxColorChange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0s;
+  animation-fill-mode: forwards; */
+
+  animation: boxColorChange 2s 1 alternate forwards;
+  animation-play-state: paused;
+}
+
+.box:hover {
+  animation-play-state: running;
+}
+.movingBox {
+  width: 5vw;
+  height: 5vw;
+  background-color: coral;
+  margin: 0.5vw 0;
+  animation: movingBox 6s infinite;
+}
+.movingBox:nth-of-type(1) {
+  animation-timing-function: linear;
+}
+.movingBox:nth-of-type(2) {
+  animation-timing-function: ease;
+}
+.movingBox:nth-of-type(3) {
+  animation-timing-function: ease-in;
+}
+.movingBox:nth-of-type(4) {
+  animation-timing-function: ease-out;
+}
+.movingBox:nth-of-type(5) {
+  animation-timing-function: ease-in-out;
+}
+.movingBox:nth-of-type(6) {
+  animation-timing-function: steps(10);
+}
+.box2 {
+  height: 5vw;
+  background-color: cornflowerblue;
+  animation: boxToCircle 4s linear infinite alternate;
+}
+main {
+  width: 80%;
+  margin: 2vw auto;
+}
+
+section {
+  width: 100%;
+  background-color: white;
+  border-radius: 2vw;
+  margin: 2vw 0;
+}
+
+.mario {
+  width: 68px;
+  height: 68px;
+  background-image: url("../images/mario-walk-n-jump-68.png");
+  animation: marioWalk 0.6s infinite steps(1), marioMove 6s infinite linear;
+  transition: filter 0.5s ease;
+}
+.mario::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/mario-walk-n-jump-68.png");
+  display: block;
+  background-position-x: 68px;
+  opacity: 0;
+  animation: marioJump 6s infinite linear;
+}
+.mario:hover,
+.mario:hover::before {
+  /* animation-play-state: paused; */
+  filter: invert(100%);
+  transition: filter 1s ease;
+}
+#mario {
+  overflow: hidden;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 8vw;
+  text-align: center;
+}
+#mario span {
+  display: inline-block;
+  animation: marioLetters 6s infinite linear;
+}
+.blast {
+  width: 14.75vw;
+  height: 14.75vw;
+  background-image: url("../images/blast-151.png");
+  background-size: 117.97vw 58.79vw;
+  animation: blast 2s steps(1) infinite;
+}
+#blast-emoji {
+  display: flex;
+  justify-content: space-between;
+}
+.emoji {
+  width: 15vw;
+  height: 15vw;
+  background-image: url("../images/emoji-160.png");
+  background-size: 105vw 15vw;
+  position: relative;
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+.emoji:hover {
+  transition: transform 2s ease;
+}
+.emoji1:hover {
+  transform: scale(0.1);
+}
+.emoji2:hover {
+  transform: scale(2);
+}
+.emoji3:hover {
+  transform: rotate(-360deg);
+}
+.emoji4:hover {
+  transform: rotate(360deg) scale(0.5);
+}
+.eyes,
+.mouth {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/emoji-160.png");
+  background-size: 105vw 15vw;
+  z-index: 1;
+}
+.eyes {
+  animation: eyes 3s steps(1) infinite;
+}
+.mouth {
+  animation: mouth 3s steps(1) infinite;
+}
+.eyes1,
+.mouth4 {
+  animation-direction: normal;
+}
+.eyes2,
+.mouth3 {
+  animation-direction: reverse;
+}
+.eyes3,
+.mouth2 {
+  animation-direction: alternate;
+}
+.eyes4,
+.mouth1 {
+  animation-direction: alternate-reverse;
+}
